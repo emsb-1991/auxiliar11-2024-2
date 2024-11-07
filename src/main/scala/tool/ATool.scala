@@ -14,7 +14,6 @@ abstract class ATool(override val name: String) extends Tool {
 
   override def obtainBlocks(): Array[Block] = collectedBlocks.toArray
 
-  override def visitDirt(b: Dirt, c: Chunk): Unit = {}
   override def visitStone(b: Stone, c: Chunk): Unit = {}
   override def visitWood(b: Wood, c: Chunk): Unit = {}
 

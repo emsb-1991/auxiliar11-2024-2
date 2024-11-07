@@ -8,7 +8,6 @@ class WorldTest extends FunSuite {
     player = new world.Player()
     chunk = new world.Chunk()
     chunk.addBlock(new block.Stone())
-    chunk.addBlock(new block.Dirt())
     chunk.addBlock(new block.Wood())
   }
 
@@ -40,9 +39,4 @@ class WorldTest extends FunSuite {
     assertEquals(axe.obtainBlocks().length, 1)
   }
 
-  test("Player can mine with a Shovel") {
-    val shovel = new tool.Shovel()
-    player.mine(shovel, chunk)
-    assertEquals(shovel.obtainBlocks().length, 1)
-  }
 }

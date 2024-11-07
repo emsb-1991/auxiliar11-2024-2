@@ -12,11 +12,6 @@ class Chunk {
     val blocks = this.blocks.clone()
     blocks.foreach(_.accept(tool, this))
   }
-  def getMinedWithMatch(tool: Tool): Unit = {
-    // avoid mutation during iteration
-    val blocks = this.blocks.clone()
-    blocks.foreach(tool.use(_, this))
-  }
 
   def addBlock(block: Block): Unit = {
     blocks += block
