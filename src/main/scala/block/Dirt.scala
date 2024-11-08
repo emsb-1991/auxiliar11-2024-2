@@ -12,5 +12,6 @@ class Dirt extends ABlock("Dirt") {
     visitor match
       case a: Pickaxe => a.visitDirt(this, c)
       case b: Shovel => b.visitDirt(this, c)
+      case _ => println("not implemented")
   }
 }

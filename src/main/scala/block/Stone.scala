@@ -12,5 +12,6 @@ class Stone extends ABlock("Stone") {
     visitor match
       case a: Axe => a.visitStone(this, c)
       case b: Pickaxe => b.visitStone(this, c)
+      case _ => println("not implemented")
   }
 }
