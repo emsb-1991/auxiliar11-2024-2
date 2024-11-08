@@ -1,6 +1,6 @@
 package tool
 
-import block.{Block, Dirt, Stone, Wood}
+import block.{Block, Stone, Wood}
 import world.Chunk
 
 import scala.collection.mutable.ArrayBuffer
