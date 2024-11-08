@@ -26,7 +26,8 @@ class ToolTest extends FunSuite {
     val stone = new block.Stone()
     chunk.addBlock(wood)
     chunk.addBlock(stone)
-    chunk.getMinedWithVisitor(axe)
+    //chunk.getMinedWithVisitor(axe)
+    chunk.getMinedWithMatch(axe)
     assert(axe.obtainBlocks().contains(wood))
     assert(!axe.obtainBlocks().contains(stone))
   }
@@ -36,7 +37,7 @@ class ToolTest extends FunSuite {
     val wood = new block.Wood()
     chunk.addBlock(stone)
     chunk.addBlock(wood)
-    chunk.getMinedWithVisitor(pickaxe)
+    chunk.getMinedWithMatch(pickaxe)
     assert(pickaxe.obtainBlocks().contains(stone))
     assert(!pickaxe.obtainBlocks().contains(wood))
   }

@@ -3,14 +3,14 @@ package block
 import tool._
 import world.Chunk
 
-class Stone extends ABlock("Stone") {
+class Dirt extends ABlock("Dirt") {
   override def accept(visitor: Tool, c: Chunk): Unit = {
-    visitor.visitStone(this, c)
+    visitor.visitDirt(this, c)
   }
 
   override def use(visitor: Tool, c: Chunk): Unit = {
     visitor match
-      case a: Axe => a.visitStone(this, c)
-      case b: Pickaxe => b.visitStone(this, c)
+      case a: Pickaxe => a.visitDirt(this, c)
+      case b: Shovel => b.visitDirt(this, c)
   }
 }

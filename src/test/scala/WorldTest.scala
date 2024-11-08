@@ -12,19 +12,19 @@ class WorldTest extends FunSuite {
   }
 
   test("A block can be added to a chunk") {
-    assertEquals(chunk.blocks.length, 3)
+    assertEquals(chunk.blocks.length, 2)
     val b = new block.Stone()
     chunk.addBlock(b)
-    assertEquals(chunk.blocks.length, 4)
+    assertEquals(chunk.blocks.length, 3)
   }
 
   test("A block can be removed from a chunk") {
-    assertEquals(chunk.blocks.length, 3)
+    assertEquals(chunk.blocks.length, 2)
     val b = new block.Stone()
     chunk.addBlock(b)
-    assertEquals(chunk.blocks.length, 4)
-    chunk.removeBlock(b)
     assertEquals(chunk.blocks.length, 3)
+    chunk.removeBlock(b)
+    assertEquals(chunk.blocks.length, 2)
   }
 
   test("Player can mine with a Pickaxe") {

@@ -7,4 +7,8 @@ class Axe extends ATool("Axe") {
     addBlock(b)
     c.removeBlock(b)
   }
+
+  override def visitStone(b: block.Stone, c: Chunk): Unit = {
+    c.removeBlock(b)
+  }
 }

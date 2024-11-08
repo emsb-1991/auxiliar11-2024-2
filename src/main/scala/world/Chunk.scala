@@ -20,4 +20,9 @@ class Chunk {
   def removeBlock(block: Block): Unit = {
     blocks -= block
   }
+  
+  def getMinedWithMatch(tool: Tool): Unit = {
+    val blocks = this.blocks.clone()
+    blocks.foreach(_.use(tool, this))
+  }
 }
